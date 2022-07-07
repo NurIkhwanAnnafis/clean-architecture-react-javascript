@@ -1,3 +1,7 @@
 import { TodoDataSource } from "../../../Data/DataSource/Todo";
 
-export const UGetTodoList = async () => await TodoDataSource.getTodoList();
+export const UGetTodoList = async () => {
+  const data = await TodoDataSource.getTodoList();
+
+  return data;
+};
