@@ -1,8 +1,5 @@
 /**
- * @typedef Data
- * @property {object[]} data
- * @property {number} data[].userId
- * @property {number} data[].id
- * @property {string} data[].title
- * @property {boolean} data[].completed
+ * @typedef DataUsecase
+ * @property {number} id
+ * @property {string} name
  */

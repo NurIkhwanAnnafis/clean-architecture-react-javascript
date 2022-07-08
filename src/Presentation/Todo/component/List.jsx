@@ -6,18 +6,22 @@ const TodoList = (props) => {
   return (
     <ul>
       Todo List:
-      {listData.map((data, index) => <li key={index}>{data.title}</li>)}
+      {listData.map(data => <li key={data.id}>{data.name}</li>)}
     </ul>
   )
 }
 
 TodoList.propTypes = {
-  listData: PropTypes.arrayOf({
-    completed: PropTypes.bool,
-    id: PropTypes.number,
-    title: PropTypes.string,
-    userId: PropTypes.number,
-  })
+  listData: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+    })
+  )
 };
+
+TodoList.defaultProps = {
+  listData: [{ id: 0, name: '' }],
+}
 
 export default TodoList;
